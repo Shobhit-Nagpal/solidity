@@ -26,6 +26,7 @@ pragma solidity ^0.8.0;
     20. We can do custom errors in Solidty above 0.8.4
     21. revert does exactly what require does without checking any conditionals.
     22. recieve() and fallback() are special functions that we can use when someone does not call any functions but still sends token to our contract through let's say a wallet like Metamask.
+    23. For constant keyword, we have to know value while writing code. For immutable keyword, we can assign the value dynamically only once in the constructor.
 
 */
 
