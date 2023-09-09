@@ -30,4 +30,10 @@ contract SimpleStorage {
     function retrieve() public view returns (uint256) {
         return favNumber;
     }
+
+    //Because SimpleStorage contract does not have a constructor, the args will be empty. When we do have a constructor in a contract, we'll be passing in args.
+
+    async function verify(contractAddr, args) {
+    
+    }
 }
