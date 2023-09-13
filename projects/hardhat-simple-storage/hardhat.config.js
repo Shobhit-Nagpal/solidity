@@ -9,6 +9,7 @@ const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "";
 const LOCALHOST_RPC_URL = process.env.LOCALHOST_RPC_URL || "";
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "";
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -25,8 +26,8 @@ module.exports = {
     }
 
   },
-    etherscan: {
-        apiKey: process.env.ETHERSCAN_API_KEY
+    eetherscan: {
+        apiKey: ETHERSCAN_API_KEY
     },
 
   solidity: "0.8.7",

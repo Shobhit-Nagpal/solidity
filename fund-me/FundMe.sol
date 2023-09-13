@@ -22,7 +22,7 @@ pragma solidity ^0.8.0;
     16. Modifiers are contract-level declarations which allow us to inject reusable logic into function calls. The _; tells the function to run the rest of the code.
 */
 
-import "./PriceConvertor.sol";
+import "./PriceConverter.sol";
 
 contract FundMe {
 
