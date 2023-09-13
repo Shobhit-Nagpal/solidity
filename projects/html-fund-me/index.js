@@ -1,26 +1,22 @@
-console.log("AYO WHAT IS GOOD, BRUV");
-
 const connectBtn = document.querySelector("#connectBtn");
 
 if (typeof window.ethereum !== "undefined") {
-    console.log("Look at that, we do have a metamask");
+    console.log("Metamask detected");
 }
 else {
-    console.log("L + ratio");
+    console.log("No Metamask detected");
 }
 
 async function getAccount() {
-    await window.ethereum.request({ method: 'eth_requestAccounts' })
-    .then(console.log("Connected!"))
-    .catch((err) => {
-        console.log("Get trolled by JS");
+    try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' })
+        console.log("Connected!");
+        connectBtn.innerHTML = "Connected";
+    } catch(err) {
         console.log(err);
-    });
-    connectBtn.innerHTML = "Connected";
+    }
 }
 
 connectBtn.addEventListener("click", function () {
-    console.log("Before getAccoutn");
     getAccount();
-    console.log("After getAccount");
 });
